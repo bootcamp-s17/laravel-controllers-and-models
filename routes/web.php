@@ -15,5 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/icecream/menu', 'MenuController@index');
+Route::get('/color', 'ColorController@index');
+
+Route::post('/color', 'ColorController@store');
 

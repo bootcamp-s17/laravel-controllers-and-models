@@ -29,4 +29,17 @@ class ColorController extends Controller
 
   }
 
+  function destroy($id) {
+
+    // Delete a color
+
+    $color = \App\Color::find($id);
+
+    $color->delete();
+
+    return redirect('color');
+
+  }
+
+
 }

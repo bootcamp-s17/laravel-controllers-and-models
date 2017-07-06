@@ -19,3 +19,5 @@ Route::get('/color', 'ColorController@index');
 
 Route::post('/color', 'ColorController@store');
 
+Route::delete('/color/{id}', 'ColorController@destroy');
+

@@ -36,7 +36,9 @@
 @foreach ($colors as $color)
 
   <div class="row mx-auto" style="padding: 10px 0;">
-    <form method="get" action="">
+    <form method="post" action="/color/{{ $color['id'] }}">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
       <input name="removeColorId" value="37" type="hidden">
       <button type="submit" class="close" aria-label="Remove">
         <span aria-hidden="true" style="padding-right: 10px;">&times;</span>

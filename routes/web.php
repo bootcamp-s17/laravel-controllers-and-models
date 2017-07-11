@@ -21,3 +21,7 @@ Route::post('/color', 'ColorController@store');
 
 Route::delete('/color/{id}', 'ColorController@destroy');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

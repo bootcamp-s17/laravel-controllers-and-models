@@ -1,6 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script>
+  $( function() {
+    // var availableTags = [
+    //   "ActionScript",
+    //   "AppleScript",
+    //   "Asp",
+    //   "BASIC",
+    //   "C",
+    //   "C++",
+    //   "Clojure",
+    //   "COBOL",
+    //   "ColdFusion",
+    //   "Erlang",
+    //   "Fortran",
+    //   "Groovy",
+    //   "Haskell",
+    //   "Java",
+    //   "JavaScript",
+    //   "Lisp",
+    //   "Perl",
+    //   "PHP",
+    //   "Python",
+    //   "Ruby",
+    //   "Scala",
+    //   "Scheme"
+    // ];
+  var availableTags = {!! $colorList !!};
+  $( "#colorName" ).autocomplete({
+    source: availableTags
+  });  
+});
+</script>
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

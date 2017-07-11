@@ -19,8 +19,21 @@ class ColorController extends Controller
 
   function index() {
 
+    // Should look like this:
+    // $colorList = '["Red", "Blue", "Green", "Purple"]';
+
     $colors = \App\Color::all();
-    return view('color.index', compact('colors'));
+
+    // This one contains deleted colors, too
+    $allColors = \App\Color::withTrashed()->get();
+
+    $colorList = '[';
+    foreach ($allColors as $color) {
+      $colorList .= '"' . $color['color_name'] . '",';
+    }
+    $colorList .= ']';
+
+    return view('color.index', compact('colors', 'colorList'));
 
   }
 

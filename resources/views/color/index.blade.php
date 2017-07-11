@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>ColorThing - Laravel Version</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/colorthing.css">
-</head>
-<body class="container">
+@extends('layouts.app')
 
-<h1>ColorThing - Laravel Version</h1>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+<div class="panel-heading">ColorThing - Laravel Version</div>
 
-<br />
-<br />
+<div class="panel-body">
 
 <h4>New Color</h4>
 <form class="form-inline" method="post" action="/color" style="padding: 0 0 30px 0;">
@@ -55,6 +49,10 @@
 
 @endforeach
 
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-</body>
-</html>
+@endsection

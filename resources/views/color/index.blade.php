@@ -47,10 +47,8 @@
 <h4>New Color</h4>
 <form class="form-inline" method="post" action="/color" style="padding: 0 0 30px 0;">
   {{ csrf_field() }}
-  <div class="ui-widget">
-    <label class="sr-only" for="colorName">Color Name</label>
-    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="colorName" name="colorName" placeholder="The deep dark void...">
-  </div>
+  <label class="sr-only" for="colorName">Color Name</label>
+  <input type="text" class="form-control ui-widget" id="colorName" name="colorName" placeholder="The deep dark void...">
   <label class="sr-only" for="hexCode">Hex Code</label>
   <div class="input-group mb-2 mr-sm-2 mb-sm-0">
     <div class="input-group-addon">#</div>

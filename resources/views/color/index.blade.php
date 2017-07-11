@@ -29,21 +29,21 @@
 
 @foreach ($colors as $color)
 
-  <div class="row mx-auto" style="padding: 10px 0;">
-    <form method="post" action="/color/{{ $color['id'] }}">
-      {{ csrf_field() }}
-      {{ method_field('DELETE') }}
-      <input name="removeColorId" value="37" type="hidden">
-      <button type="submit" class="close" aria-label="Remove">
-        <span aria-hidden="true" style="padding-right: 10px;">&times;</span>
-      </button>
-    </form>
-    <div class="col" style="min-height: 25px; max-width: 100px; background-color: #{{ $color['hex_code'] }}">
+  <div class="row" style="padding: 10px 0;">
+    <div class="col-xs-1"> 
+      <form method="post" action="/color/{{ $color['id'] }}">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+        <input name="removeColorId" value="37" type="hidden">
+        <button type="submit" class="close" aria-label="Remove">
+          <span aria-hidden="true" style="padding-right: 10px;">&times;</span>
+        </button>
+      </form>
     </div>
-    <div class="col">
-      <div class="align-middle">
-        {{ $color['color_name']}} (#{{ $color['hex_code'] }})
-      </div>
+    <div class="col-xs-1" style="min-height: 25px; max-width: 100px; background-color: #{{ $color['hex_code'] }}">
+    </div>
+    <div class="col-xs-3">
+      {{ $color['color_name']}} (#{{ $color['hex_code'] }})
     </div>
   </div>  
 
